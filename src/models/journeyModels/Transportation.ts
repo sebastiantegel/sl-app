@@ -3,7 +3,7 @@ import type { TransportationProperty } from "./TransportationProperty";
 
 export type Transportation = {
   isSamtrafik: boolean;
-  name: string;
+  name?: string;
   number: string;
   disassembledName: string;
   product: Product;

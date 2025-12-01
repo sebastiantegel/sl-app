@@ -25,9 +25,7 @@ export function renderJourneyInfo(
       <p><strong>To:</strong> ${
         leg.destination.name
       } (kl: ${convertToReadableTime(leg.destination.arrivalTimePlanned)})</p>
-      <p><strong>Transport:</strong> ${leg.transportation.product.name} (${
-      leg.transportation.name
-    })</p>
+      <p><strong>Transport:</strong> ${leg.transportation.name ?? "Gång"}</p>
       <p><strong>Distance:</strong> ${
         leg.distance
       } m | Duration: ${convertToReadableTime(leg.duration)} min</p>
