@@ -1,0 +1,13 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $m-sm;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My SL</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpWAz_qb8vffOJFHP9z1Mot4NcvQRXOH8"
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <section class="box" id="search">
+        <form id="searchForm">
+          <label for="destination">Destination:</label>
+          <div id="autocomplete-container">
+            <input type="text" name="destination" id="destination" />
+            <div class="autocomplete hidden"></div>
+          </div>
+          <input type="hidden" name="locationid" />
+          <button type="submit">Sök</button>
+        </form>
+        <article class="error hidden" id="error"></article>
+      </section>
+
+      <section class="box col-2 box--full box--fluid" id="result">
+        <div id="map" class="map"></div>
+        <div id="infos"></div>
+      </section>
+
+      <div id="spinner" class="spinner-overlay hidden">
+        <div class="spinner-content">
+          <div class="spinner"></div>
+          <p id="spinnerText">Loading...</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

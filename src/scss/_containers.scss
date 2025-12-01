@@ -1,0 +1,41 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.box {
+  height: 100vh;
+  padding: $p-lg;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+
+  @include tablet {
+  }
+
+  &.col-2 {
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+  &--fluid {
+    padding: 0;
+  }
+}
+
+#infos {
+  padding: $p-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $p-lg;
+
+  & .leg {
+    border: 1px solid $secondary;
+
+    &.selected {
+      background-color: $accent;
+    }
+  }
+}

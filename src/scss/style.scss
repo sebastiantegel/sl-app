@@ -1,0 +1,14 @@
+@use "reset";
+@use "mixins";
+@use "containers";
+@use "spinner";
+@use "inputs";
+@use "forms";
+@use "buttons";
+
+#app {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

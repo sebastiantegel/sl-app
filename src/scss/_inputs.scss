@@ -1,0 +1,35 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+input {
+  line-height: $line-height;
+  padding: $p-sm;
+}
+
+#autocomplete-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .autocomplete {
+    position: absolute;
+    top: calc($line-height + 2 * $p-sm + 4px);
+    width: 100%;
+    z-index: 999;
+    background-color: #213547;
+
+    border: 1px solid grey;
+    border-top: 0;
+
+    max-height: 200px;
+    overflow-y: scroll;
+
+    & div:hover {
+      background-color: rgba($color: #fff, $alpha: 0.3);
+    }
+
+    @include tablet {
+      background-color: transparent;
+    }
+  }
+}
