@@ -6,7 +6,7 @@ import type { Transportation } from "./Transportation";
 export type Leg = {
   coords: number[][];
   destination: Destination;
-  distance: number;
+  distance?: number;
   duration: number;
   origin: Origin;
   pathDescriptions: Path[];
