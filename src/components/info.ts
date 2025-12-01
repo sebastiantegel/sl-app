@@ -26,9 +26,12 @@ export function renderJourneyInfo(
         leg.destination.name
       } (kl: ${convertToReadableTime(leg.destination.arrivalTimePlanned)})</p>
       <p><strong>Transport:</strong> ${leg.transportation.name ?? "Gång"}</p>
-      <p><strong>Distance:</strong> ${
-        leg.distance ? leg.distance + "m |" : ""
-      } Duration: ${convertToReadableTime(leg.duration)} min</p>
+      ${
+        leg.distance
+          ? `<p><strong>Distance:</strong> ${leg.distance + "m"}</p>`
+          : ""
+      }
+      <p>Duration: ${convertToReadableTime(leg.duration)} min</p>
     `;
     legDiv.addEventListener("click", () => {
       const shouldClear = legDiv.classList.contains("selected");
